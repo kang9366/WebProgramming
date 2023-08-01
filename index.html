@@ -1,109 +1,83 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>DIV</title>
-  <style>
-    body {
-      margin: 0; /* Remove default body margin */
-    }
+	<head>
+		<title>Full Motion</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body id="top">
+		<!-- Banner-->
+		<section id="banner" data-video="images/banner">
+			<div class="inner">
+				<header>
+					<h1>Plan Your Travel!</h1>
+					<p>Plan your travel</p>
+				</header>
+				<a href="#main" class="more">Learn More</a>
+			</div>
+		</section>
 
-    .main_list {
-      margin: 0 auto; /* Center the div horizontally */
-      display: flex; /* Add flex display to use justify-content and align-content */
-      flex-direction: column; /* Stack elements vertically */
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      min-height: 100vh; /* Ensure the div covers at least the full viewport height */
-    }
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Boxes -->
+				<div class="thumbnails">
+					<div class="box">
+						<a href="" class="image fit"><img src="images/paris.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>France</h3>
+							<p>France</p>
+							<a href="" class="button fit">More</a>
+						</div>
+					</div>
+					
+					<div class="box">
+						<a href="" class="image fit"><img src="images/seoul.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>Korea</h3>
+							<p>Korea</p>
+							<a href="" class="button style2 fit">More</a>
+						</div>
+					</div>
 
-    .main_title {
-      text-align: left;
-    }
+					<div class="box">
+						<a href="" class="image fit"><img src="images/japan.webp" alt="" /></a>
+						<div class="inner">
+							<h3>Japan</h3>
+							<p>Japan</p>
+							<a href="" class="button style3 fit">More</a>
+						</div>
+					</div>
 
-    .list_start {
-      text-align: center;
-      display: grid;
-      grid-template-columns: 300px 300px 300px;
-      grid-template-rows: 300px 300px 300px;
-      gap: 10px;
-    }
+					<div class="box">
+						<a href="" class="image fit"><img src="images/switzerland.jpeg" alt="" /></a>
+						<div class="inner">
+							<h3>Switzerland</h3>
+							<p></p>
+							<a href="" class="button style2 fit">More</a>
+						</div>
+					</div>
 
-    .list_detail {
-      border: 1px solid;
-      margin: 5px;
-      margin-bottom: 5px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+					<div class="box">
+						<a href="" class="image fit"><img src="images/usa.jpg" alt="" /></a>
+						<div class="inner">
+							<h3>USA</h3>
+							<p></p>
+							<a href="" class="button style3 fit">More</a>
+						</div>
+					</div>
 
-    .paging_start {
-      text-align: center;
-    }
-    .list_detail:hover {
-        background-color: aqua;
-    }
-
-    .example_e {
-      border: none;
-      background: #404040;
-      color: #ffffff !important;
-      font-weight: 100;
-      padding: 20px;
-      text-transform: uppercase;
-      border-radius: 6px;
-      display: inline-block;
-      transition: all 0.3s ease 0s;
-    }
-    .example_e:hover {
-      color: #404040 !important;
-      font-weight: 700 !important;
-      letter-spacing: 3px;
-      background: none;
-      -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-      -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-      transition: all 0.3s ease 0s;
-    }
-  </style>
-</head>
-<body>
-    <div class="main_title">
-        <p>DIV 영역을 나눠보자.</p>
-    </div>
-  <!-- 리스트 불러오기  -->
-  <div class="main_list">
-    <!-- 리스트 -->
-    <div class="list_start">
-      <div class="example_e">
-        <p>1</p>
-      </div>
-      <div class="example_e">
-        <p>2</p>
-      </div>
-      <div class="example_e">
-        <p>3</p>
-      </div>
-      <div class="example_e">
-        <p>4</p>
-      </div>
-      <div class="example_e">
-        <p>5</p>
-      </div>
-      <div class="example_e">
-        <p>6</p>
-      </div>
-      <div class="example_e">
-        <p>7</p>
-      </div>
-      <div class="example_e">
-        <p>8</p>
-      </div>
-      <div class="example_e">
-        <p>9</p>
-      </div>
-    </div>
-  </div>
-</body>
+					<div class="box">
+						<a href="" class="image fit"><img src="images/austrailia.jpeg" alt="" /></a>
+						<div class="inner">
+							<h3>Austrailia</h3>
+							<p>Austrailia</p>
+							<a href="" class="button fit">More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
