@@ -9,7 +9,22 @@
 	<body id="top">
 		<!-- Banner-->
 		<section id="banner" data-video="images/banner">
+			<!--hamber-->
 			<div class="inner">
+				<div class="menu">
+					<input id="menu_toggle" type="checkbox" />
+					<label class="menu_btn" for="menu_toggle">
+					  <span></span>
+					</label>
+				
+					<ul class="menu_box">
+					  <li><a class="menu_item" href="1.html">Home</a></li>
+					  <li><a class="menu_item" href="index.html">About</a></li>
+					  <li><a class="menu_item" href="#">Team</a></li>
+					  <li><a class="menu_item" href="#">Contact</a></li>
+					  <li><a class="menu_item" href="#">Twitter</a></li>
+					</ul>
+				  </div>
 				<header>
 					<h1>Plan Your Travel!</h1>
 					<p>Plan your travel</p>
@@ -17,7 +32,6 @@
 				<a href="#main" class="more">Learn More</a>
 			</div>
 		</section>
-
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
@@ -80,4 +94,11 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		const menuTrigger = document.querySelector('.menu-trigger');
+
+		menuTrigger.addEventListener('click', (event) => {
+		  event.currentTarget.classList.toggle('active-1');
+		});
+	</script>
 </html>
