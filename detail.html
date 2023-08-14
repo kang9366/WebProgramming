@@ -47,6 +47,9 @@
 									프랑스의 매력적인 풍경과 다양한 활동들은 어떤 여행자에게도 만족스러운 경험을 선사할 것입니다. 따뜻한 인사와 유럽의 정신을 느끼고 싶다면, 프랑스로의 여행을 고려해보는 것이 좋습니다.</p>
 							</header>
 							<hr>
+							<h2>위치</h2>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5665357.649031121!2d-3.2285843735326516!3d46.105169651609735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2z7ZSE656R7Iqk!5e0!3m2!1sko!2skr!4v1692018152514!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<hr>
 							<h2>언어</h2>
 							<p>프랑스어</p>
 							<hr>
@@ -71,18 +74,6 @@
 							<h3>식당, 가게</h3>
 							<p>프랑스에서는 대부분의 가게들이 오후 7시가 되면 문을 닫습니다. 뿐만 아니라, 점심시간 후 브레이크 타임이 있거나 주말에는 아예 문을 열지 않는 가게들도 종종 볼 수 있기 때문에 미리미리 필요한 생필품이나 기념품 등을 구매하시는 것이 가장 좋습니다. </p>
 							<hr>
-							<button id="show">팝업열기</button>
-    						<div class="background">
-    						  <div class="window">
-    						    <div class="popup">
-    						      <button id="close">팝업닫기</button>
-    						    </div>
-    						    <div>
-    						      <div></div>
-    						    </div>
-    						  </div>
-    						</div>
-							
 							<h2>주요 관광지</h2>
 							<section class="tiles">
 								<article class="style2">
@@ -132,6 +123,16 @@
 							</section>
 						</div>
 					</div>
+					<div class="card-footer">
+						<form onsubmit="addComment(event)">
+						  <div class="form-group">
+							<input type="text" class="form-control" placeholder="댓글을 입력하세요" required>
+						  </div>
+						  <button type="submit" class="btn btn-primary">작성</button>
+						</form>
+						<div class="comments mt-3">
+						</div>
+					  </div>
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
