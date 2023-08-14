@@ -120,5 +120,16 @@
 					location.href='detail.html';
 			}
 	    }
+
+		document.addEventListener("DOMContentLoaded", function() {
+  			const menuToggle = document.getElementById("menu_toggle");
+  			const menuBox = document.querySelector(".menu_box");
+
+  			document.addEventListener("click", function(event) {
+    			if (!menuBox.contains(event.target) && !menuToggle.contains(event.target)) {
+    	  			menuToggle.checked = false;
+    			}
+  			});
+		});
 	</script>
 </html>
