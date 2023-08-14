@@ -27,6 +27,9 @@
 				<header>
 					<h1>Plan Your Travel!</h1>
 					<p>Plan your travel</p>
+					<div class="search__container">
+						<input class="search__input" type="text" placeholder="Search" onkeyup="if(window.event.keyCode==13){search(this.value)}">
+					</div>
 				</header>
 				<a href="#main" class="more">Learn More</a>
 			</div>
@@ -108,5 +111,14 @@
 			e.preventDefault();
 			$('html, body').animate({scrollTop:0}, '300');
 		});
+
+		function search(inputValue ) {
+			switch(inputValue){
+				case "프랑스":
+					location.href='detail.html';
+				case "france":
+					location.href='detail.html';
+			}
+	    }
 	</script>
 </html>
