@@ -955,3 +955,117 @@ input, select, textarea {
 			}
 
 		}
+
+		.test {
+			display: flex;
+			max-width: 650px;
+			width: 50%;
+			height: 400px;
+			background: #fff;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			border-radius: 12px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		  }
+		  .test i.button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 36px;
+			width: 36px;
+			background-color: #343f4f;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 36px;
+			color: #fff;
+			font-size: 15px;
+			transition: all 0.3s linear;
+			z-index: 100;
+			cursor: pointer;
+		  }
+		  i.button:active {
+			transform: scale(0.94) translateY(-50%);
+		  }
+		  i#prev {
+			left: 25px;
+		  }
+		  i#next {
+			right: 25px;
+		  }
+		  .image-container {
+			height: 320px;
+			max-width: 100px;
+			width: 50%;
+			overflow: hidden;
+		  }
+		  .image-container .carousel {
+			display: flex;
+			height: 50%;
+			width: 100%;
+			transition: all 0.4s ease;
+		  }
+		  .carousel img {
+			height: 100%;
+			width: 50%;
+			border-radius: 18px;
+			border: 10px solid #fff;
+			object-fit: cover;
+		  }
+		
+		  .slideshow-container {
+			max-width: 1000px;
+			max-height: 500px;
+			position: relative;
+			margin: auto;
+		 }
+		 /* Next & previous buttons */
+		 .prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: -22px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		 }
+		 /* Position the "next button" to the right */
+		 .next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		 }
+		 /* On hover, add a black background color with a little bit seethrough */
+		 .prev:hover, .next:hover {
+			background-color: rgba(0,0,0,0.8);
+		 }
+		 /* Caption text */
+		 .text {
+			color: black;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		 }
+
+		 .dot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		 }
+		 .active, .dot:hover {
+			background-color: #717171;
+		 }
