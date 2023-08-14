@@ -37,6 +37,25 @@
 						<div class="inner">
 							<header>
 								<h1>France</h1>
+								<div class="slideshow-container">
+									<div class="mySlides fade">
+									   <img src="images/detail_france/paris.webp" style="width:100%; height: 500px">
+									   </div>
+									   <div class="mySlides fade">
+										  <img src="images/detail_france/montsaint.jpg" style="width:100%; height: 500px">
+									   </div>
+									   <div class="mySlides fade">
+										  <img src="images/detail_france/moon.jpg" style="width:100%; height: 500px">
+									   </div>
+									   <a class="prev" onclick="plusSlides(-1)">❮</a>
+									   <a class="next" onclick="plusSlides(1)">❯</a>
+								 </div>
+								 <div style="text-align:center">
+									<span class="dot" onclick="currentSlide(1)"></span>
+									<span class="dot" onclick="currentSlide(2)"></span>
+									<span class="dot" onclick="currentSlide(3)"></span>
+								 </div>
+								 <br>
 								<p>프랑스는 유럽 대륙 서부에 위치한 아름다운 나라로, 세계적으로 유명한 문화와 역사적 유산, 화려한 자연 경관, 그리고 훌륭한 요리로 더불어 여행자들에게 특별한 경험을 선사합니다.
 									이국적인 파리는 프랑스의 수도로서, 세계에서 가장 아름다운 도시 중 하나로 불리며 에펠탑, 루브르 박물관, 샹젤리제 거리 등이 매력적인 관광 명소로 자리하고 있습니다. 파리의 아트와 문화는 뛰어난 미술과 오페라, 공연 예술 등을 통해 여러분의 감각을 자극할 것입니다.
 									<br><br>
@@ -123,20 +142,35 @@
 							</section>
 						</div>
 					</div>
-					<div class="card-footer">
-						<form onsubmit="addComment(event)">
-						  <div class="form-group">
-							<input type="text" class="form-control" placeholder="댓글을 입력하세요" required>
-						  </div>
-						  <button type="submit" class="btn btn-primary">작성</button>
-						</form>
-						<div class="comments mt-3">
-						</div>
-					  </div>
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
 	</body>
+	<script>
+		var slideIndex = 1;
+      	showSlides(slideIndex);
+      	function plusSlides(n) {
+        	showSlides(slideIndex += n);
+      	}
+      function currentSlide(n) {
+         showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+      }
+	</script>
 </html>
