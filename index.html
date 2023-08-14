@@ -9,7 +9,6 @@
 	<body id="top">
 		<!-- Banner-->
 		<section id="banner" data-video="images/banner">
-			<a id="topButton"></a>
 			<!--hamber-->
 			<div class="inner">
 				<div class="menu">
@@ -97,30 +96,6 @@
 		</div>
 	</body>
 	<script>
-		var btn = $('#topButton');
-
-		$(window).scroll(function() {
-		  if ($(window).scrollTop() > 300) {
-		    btn.addClass('show');
-		  } else {
-		    btn.removeClass('show');
-		  }
-		});
-
-		btn.on('click', function(e) {
-			e.preventDefault();
-			$('html, body').animate({scrollTop:0}, '300');
-		});
-
-		function search(inputValue ) {
-			switch(inputValue){
-				case "프랑스":
-					location.href='detail.html';
-				case "france":
-					location.href='detail.html';
-			}
-	    }
-
 		document.addEventListener("DOMContentLoaded", function() {
   			const menuToggle = document.getElementById("menu_toggle");
   			const menuBox = document.querySelector(".menu_box");
@@ -131,5 +106,14 @@
     			}
   			});
 		});
+
+		function search(inputValue ) {
+			switch(inputValue){
+				case "프랑스":
+					location.href='detail.html';
+				case "france":
+					location.href='detail.html';
+			}
+	    }
 	</script>
 </html>
