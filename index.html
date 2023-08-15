@@ -19,13 +19,13 @@
 					<ul class="menu_box">
 					  <li><a class="menu_item" href="index.html">Home</a></li>
 					  <li><a class="menu_item" href="flight.html">Flight Book</a></li>
-					  <li><a class="menu_item" href="#">Team</a></li>
-					  <li><a class="menu_item" href="#">Contact</a></li>
+					  <li><a class="menu_item" href="hotel.html">Hotel Book</a></li>
+					  <li><a class="menu_item" href="planner.html">Plan</a></li>
 					</ul>
 				</div>
 				<header>
-					<h1>Plan Your Travel!</h1>
-					<p>Plan your travel</p>
+					<h1>Plan Your Travel</h1>
+					<p>다양한 여행지를 검색하고 정보를 얻어보세요</p>
 					<div class="search__container">
 						<input class="search__input" type="text" placeholder="Search" onkeyup="if(window.event.keyCode==13){search(this.value)}">
 					</div>
@@ -113,6 +113,8 @@
 					location.href='detail.html';
 				case "france":
 					location.href='detail.html';
+				default :
+					alert("준비중입니다!")
 			}
 	    }
 	</script>
