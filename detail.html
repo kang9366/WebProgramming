@@ -16,10 +16,10 @@
 					  <span></span>
 					</label>
 					<ul class="menu_box">
-					  <li><a class="menu_item" href="index.html">Home</a></li>
-					  <li><a class="menu_item" href="flight.html">Flight Book</a></li>
-					  <li><a class="menu_item" href="#">Team</a></li>
-					  <li><a class="menu_item" href="#">Contact</a></li>
+						<li><a class="menu_item" href="index.html">Home</a></li>
+						<li><a class="menu_item" href="flight.html">Flight Book</a></li>
+						<li><a class="menu_item" href="hotel.html">Hotel Book</a></li>
+						<li><a class="menu_item" href="planner.html">Plan</a></li>
 					</ul>
 				</div>
 				<!-- Main -->
@@ -27,6 +27,9 @@
 						<div class="inner">
 							<header>
 								<h1>France</h1>
+								<a href="https://currencyrate.today/"></a>
+								<script async src="https://s.fx-w.io/widgets/currency-converter/latest.js"></script>
+								
 								<div class="slideshow-container">
 									<div class="mySlides fade">
 									   <img src="images/detail_france/paris.webp" style="width:100%; height: 500px">
@@ -65,6 +68,12 @@
 							<h2>인구</h2>
 							<p>6,475만 6,584명 </p>
 							<hr>
+							<h2>환율</h2>
+							<br>
+							<div style="width: 300px; height: 200px;">
+								<fxwidget-cc amount="1" decimals="2" large="true" shadow="false" symbol="true" grouping="true" border="true" from="EUR" to="KRW" background-color="#ffffff" border-radius="0.5"></fxwidget-cc>
+							</div>
+							<hr>
 							<h2>날씨</h2>
 							<br>
 							<a class="weatherwidget-io" href="https://forecast7.com/en/46d232d21/france/" data-label_1="France" data-label_2="" data-theme="original" >FRANCE WEATHER</a>
@@ -85,7 +94,7 @@
 							<hr>
 							<h2>주요 관광지</h2>
 							<section class="tiles">
-								<article class="style2">
+								<article class="style2" id="tsss">
 									<span class="image">
 										<img src="images/detail_france/eiffel_tower.jpg" alt="" />
 									</span>
@@ -143,6 +152,21 @@
 							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 						</div>
 					</div>
+					<div id="modalWrap">
+						<div id="modalContent">
+						  <div id="modalBody" style="max-height: 80vh; overflow-y: auto;">
+							<span id="closeBtn">&times;</span>
+							<h2 style="margin-top: 50px; font-size: 30px;">에펠탑</h2>
+							<p>파리의 대표적인 랜드마크인 에펠탑은 세계적으로 유명한 관광지로, 그 아름다운 모습과 역사적인 가치로 많은 사람들에게 사랑받고 있습니다.에펠탑은 1889년에 프랑스의 엔지니어 구스타브 에펠이 파리 만국박람회를 위해 설계한 건축물입니다. 이는 원래 임시로 세워진 것이었지만, 그 놀라운 디자인과 기술적인 혁신으로 인해 후에 영구적으로 남게 되었습니다. 에펠탑은 프랑스의 산업 혁명과 기술 발전의 상징으로 여겨지며, 파리의 대표적인 랜드마크 중 하나로 자리 잡게 되었습니다.</p>
+							<h2>가격</h2>
+							<p>26.8 EUR</p>
+							<h2>전화번호</h2>
+							<p>+33 892 70 12 39</p>
+							<h2>위치</h2>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991441031619!2d2.29190101240323!3d48.85837360058762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2z7JeQ7Y6g7YOR!5e0!3m2!1sko!2skr!4v1692041285884!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						  </div>
+						</div>
+					</div>
 			</div>
 			
 		<!-- Scripts -->
@@ -186,5 +210,35 @@
     			}
   			});
 		});
+		
+		const modal = document.getElementById('modalWrap');
+		const section = document.querySelector('.tiles');
+
+		const btn = document.getElementById('tsss');
+		const closeBtn = document.getElementById('closeBtn');
+
+		btn.onclick = function(event) {
+		  modal.style.display = 'block';
+		  document.body.classList.add('modal-open');
+		  section.style.pointerEvents = 'none';
+		  event.stopPropagation();
+		}
+
+		closeBtn.onclick = function() {
+		  closeModal();
+		}
+
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    closeModal();
+		  }
+		}
+
+		function closeModal() {
+		  modal.style.display = 'none';
+		  document.body.classList.remove('modal-open');
+		  section.style.pointerEvents = 'auto';
+		}
+
 	</script>
 </html>
