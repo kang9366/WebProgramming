@@ -486,8 +486,8 @@ button.style3:active,
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	padding: 8em 4em 6em 4em;
-	min-height: 20vh;
+	padding: 18em 4em 18em 4em;
+	min-height: 50vh;
 	height: 50vh;
 	background-image: url("../../images/index/banner.jpg");
 	background-position: center;
@@ -510,7 +510,7 @@ button.style3:active,
 	font-size: 5em;
 	font-weight: 400;
 	font-family: 'Passion One', cursive;
-	margin: 0;
+	margin: 0px;
 }
 
 @media screen and (max-width: 980px) {
