@@ -20,14 +20,18 @@
 					  <li><a class="menu_item" href="index.html">Home</a></li>
 					  <li><a class="menu_item" href="flight.html">Flight Book</a></li>
 					  <li><a class="menu_item" href="hotel.html">Hotel Book</a></li>
-					  <li><a class="menu_item" href="planner.html">Plan</a></li>
 					</ul>
 				</div>
 				<header>
 					<h1>Plan Your Travel</h1>
 					<p>다양한 여행지를 검색하고 정보를 얻어보세요</p>
+					<h2>여행지 검색</h2>
 					<div class="search__container">
 						<input class="search__input" type="text" placeholder="Search" onkeyup="if(window.event.keyCode==13){search(this.value)}">
+					</div>
+					<h2>범죄율 순위 검색</h2>
+					<div class="crime_search__container">
+						<input class="search__input" type="text" placeholder="Search" onkeyup="if(window.event.keyCode==13){fetchData(this.value)}">
 					</div>
 				</header>
 				<a href="#main" class="more">Learn More</a>
@@ -95,6 +99,7 @@
 			</div>
 		</div>
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
   			const menuToggle = document.getElementById("menu_toggle");
@@ -107,14 +112,77 @@
   			});
 		});
 
-		function search(inputValue ) {
+		const options = {
+    	  method: 'GET',
+    	  url: 'https://ranked-crime-cities.p.rapidapi.com/Kc4Qth/ranked_crime_cities',
+    	  headers: {
+    	    'X-RapidAPI-Key': '576223b918msh99db721cc9c9a16p135c18jsnfc888bc2cf28',
+    	    'X-RapidAPI-Host': 'ranked-crime-cities.p.rapidapi.com'
+    	  }
+    	};
+
+		async function fetchData(text) {
+      		try {
+      		  const response = await axios.get(options.url, {
+      		    headers: options.headers
+      		  });
+		  
+      		  displayData(response.data, text);
+      		} catch (error) {
+      		  console.error(error);
+      		}
+    	}
+
+		function displayData(data, text) {
+			for (let i = 0; i < data.length; i++) {
+				if(text!=""&&(JSON.stringify(data[i], null, 2).includes(text)||JSON.stringify(data[i], null, 2).toLowerCase().includes(text))){
+					alert(text + "는 " + i + "위 입니다.")
+					break;
+				}
+			}
+   	 	}
+
+		function search(inputValue) {
 			switch(inputValue){
 				case "프랑스":
-					location.href='detail.html';
+					location.href='france.html';
+					break;
 				case "france":
-					location.href='detail.html';
-				default :
-					alert("준비중입니다!")
+					location.href='france.html';
+					break;
+				case "한국":
+					location.href='korea.html';
+					break;
+				case "korea":
+					location.href='korea.html';
+					break;
+				case "미국":
+					location.href='usa.html';
+					break;
+				case "usa":
+					location.href='usa.html';
+					break;
+				case "스위스":
+					location.href='switzerland.html';
+					break;
+				case "switzerland":
+					location.href='switzerland.html';
+					break;
+				case "일본":
+					location.href='japan.html';
+					break;
+				case "japan":
+					location.href='japan.html';
+					break;
+				case "호주":
+					location.href='austrailia.html';
+					break;
+				case "austrailia":
+					location.href='austrailia.html';
+					break;
+				default:
+					alert("올바른 검색어를 입력해주세요");
+					break;
 			}
 	    }
 	</script>
